@@ -1,0 +1,227 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1A2E"/>
+      <stop offset="50%" stop-color="#2D1B3D"/>
+      <stop offset="100%" stop-color="#1A1A2E"/>
+    </linearGradient>
+    
+    <!-- Gradient for central orb -->
+    <radialGradient id="coreGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="30%" stop-color="#F4D03F"/>
+      <stop offset="70%" stop-color="#E74C8C"/>
+      <stop offset="100%" stop-color="#9B59B6"/>
+    </radialGradient>
+    
+    <!-- Title gradient -->
+    <linearGradient id="titleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F4D03F"/>
+      <stop offset="50%" stop-color="#E74C8C"/>
+      <stop offset="100%" stop-color="#00D9C0"/>
+    </linearGradient>
+    
+    <!-- Particle gradients -->
+    <radialGradient id="particleRed" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF6B6B"/>
+      <stop offset="100%" stop-color="#F24738"/>
+    </radialGradient>
+    
+    <radialGradient id="particleBlue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6B8BFF"/>
+      <stop offset="100%" stop-color="#383EF2"/>
+    </radialGradient>
+    
+    <radialGradient id="particleGreen" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7DFF7D"/>
+      <stop offset="100%" stop-color="#4DBF49"/>
+    </radialGradient>
+    
+    <radialGradient id="particlePink" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF8DC7"/>
+      <stop offset="100%" stop-color="#E74C8C"/>
+    </radialGradient>
+    
+    <radialGradient id="particleTeal" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#5FFFEC"/>
+      <stop offset="100%" stop-color="#00D9C0"/>
+    </radialGradient>
+    
+    <radialGradient id="particlePurple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D98FFF"/>
+      <stop offset="100%" stop-color="#9B59B6"/>
+    </radialGradient>
+    
+    <radialGradient id="particleGold" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFE566"/>
+      <stop offset="100%" stop-color="#F4D03F"/>
+    </radialGradient>
+    
+    <!-- Glow filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Stronger glow for core -->
+    <filter id="coreGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="12" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Text glow -->
+    <filter id="textGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Decorative stars in background -->
+  <g fill="#FFFFFF" opacity="0.3">
+    <circle cx="50" cy="80" r="1.5"/>
+    <circle cx="150" cy="150" r="1"/>
+    <circle cx="100" cy="400" r="1.5"/>
+    <circle cx="200" cy="550" r="1"/>
+    <circle cx="1100" cy="100" r="1.5"/>
+    <circle cx="1050" cy="200" r="1"/>
+    <circle cx="1150" cy="450" r="1.5"/>
+    <circle cx="1000" cy="550" r="1"/>
+    <circle cx="80" cy="300" r="1"/>
+    <circle cx="1120" cy="320" r="1"/>
+  </g>
+  
+  <!-- Explosion rays emanating from logo center (left side) -->
+  <g opacity="0.5">
+    <polygon points="280,315 180,150 200,165 280,315" fill="#F4D03F" opacity="0.4"/>
+    <polygon points="280,315 380,150 360,165 280,315" fill="#E74C8C" opacity="0.4"/>
+    <polygon points="280,315 480,250 460,270 280,315" fill="#00D9C0" opacity="0.4"/>
+    <polygon points="280,315 480,380 460,360 280,315" fill="#F4D03F" opacity="0.4"/>
+    <polygon points="280,315 380,500 360,480 280,315" fill="#9B59B6" opacity="0.4"/>
+    <polygon points="280,315 180,500 200,480 280,315" fill="#E74C8C" opacity="0.4"/>
+    <polygon points="280,315 80,380 100,360 280,315" fill="#00D9C0" opacity="0.4"/>
+    <polygon points="280,315 80,250 100,270 280,315" fill="#4DBF49" opacity="0.4"/>
+  </g>
+  
+  <!-- Outer ring particles -->
+  <g filter="url(#glow)">
+    <circle cx="280" cy="120" r="14" fill="url(#particleRed)"/>
+    <circle cx="160" cy="160" r="10" fill="url(#particleTeal)"/>
+    <circle cx="400" cy="140" r="12" fill="url(#particlePurple)"/>
+    
+    <circle cx="480" cy="260" r="13" fill="url(#particleGreen)"/>
+    <circle cx="500" cy="370" r="11" fill="url(#particlePink)"/>
+    <circle cx="460" cy="450" r="12" fill="url(#particleBlue)"/>
+    
+    <circle cx="380" cy="520" r="14" fill="url(#particleTeal)"/>
+    <circle cx="280" cy="530" r="10" fill="url(#particleRed)"/>
+    <circle cx="180" cy="510" r="13" fill="url(#particlePurple)"/>
+    
+    <circle cx="80" cy="420" r="12" fill="url(#particleGreen)"/>
+    <circle cx="60" cy="315" r="11" fill="url(#particlePink)"/>
+    <circle cx="90" cy="200" r="13" fill="url(#particleBlue)"/>
+  </g>
+  
+  <!-- Middle ring particles -->
+  <g filter="url(#glow)">
+    <circle cx="280" cy="170" r="16" fill="url(#particlePink)"/>
+    <circle cx="180" cy="200" r="12" fill="url(#particleBlue)"/>
+    <circle cx="380" cy="190" r="14" fill="url(#particleGreen)"/>
+    
+    <circle cx="430" cy="290" r="15" fill="url(#particlePurple)"/>
+    <circle cx="440" cy="380" r="13" fill="url(#particleRed)"/>
+    
+    <circle cx="380" cy="460" r="16" fill="url(#particleBlue)"/>
+    <circle cx="280" cy="470" r="12" fill="url(#particleGreen)"/>
+    <circle cx="180" cy="450" r="14" fill="url(#particlePink)"/>
+    
+    <circle cx="120" cy="370" r="15" fill="url(#particleTeal)"/>
+    <circle cx="130" cy="260" r="13" fill="url(#particleRed)"/>
+  </g>
+  
+  <!-- Inner ring particles -->
+  <g filter="url(#glow)">
+    <circle cx="280" cy="220" r="18" fill="url(#particleTeal)"/>
+    <circle cx="210" cy="250" r="13" fill="url(#particlePurple)"/>
+    <circle cx="350" cy="245" r="15" fill="url(#particleRed)"/>
+    
+    <circle cx="380" cy="315" r="16" fill="url(#particlePink)"/>
+    <circle cx="360" cy="385" r="14" fill="url(#particleGreen)"/>
+    
+    <circle cx="280" cy="410" r="18" fill="url(#particleBlue)"/>
+    <circle cx="200" cy="385" r="15" fill="url(#particleTeal)"/>
+    
+    <circle cx="180" cy="315" r="16" fill="url(#particlePurple)"/>
+  </g>
+  
+  <!-- Spark/streak effects -->
+  <g stroke-linecap="round" opacity="0.7">
+    <line x1="280" y1="280" x2="280" y2="180" stroke="#FFFFFF" stroke-width="2.5"/>
+    <line x1="320" y1="290" x2="400" y2="210" stroke="#FFFFFF" stroke-width="2.5"/>
+    <line x1="330" y1="320" x2="420" y2="320" stroke="#FFFFFF" stroke-width="2.5"/>
+    <line x1="315" y1="355" x2="390" y2="430" stroke="#FFFFFF" stroke-width="2.5"/>
+    <line x1="280" y1="360" x2="280" y2="450" stroke="#FFFFFF" stroke-width="2.5"/>
+    <line x1="245" y1="350" x2="170" y2="425" stroke="#FFFFFF" stroke-width="2.5"/>
+    <line x1="230" y1="315" x2="140" y2="315" stroke="#FFFFFF" stroke-width="2.5"/>
+    <line x1="245" y1="280" x2="170" y2="205" stroke="#FFFFFF" stroke-width="2.5"/>
+  </g>
+  
+  <!-- Central explosive core -->
+  <g filter="url(#coreGlow)">
+    <circle cx="280" cy="315" r="60" fill="none" stroke="#F4D03F" stroke-width="4" opacity="0.5"/>
+    <circle cx="280" cy="315" r="45" fill="url(#coreGradient)"/>
+    <circle cx="268" cy="303" r="15" fill="#FFFFFF" opacity="0.6"/>
+    <circle cx="265" cy="300" r="8" fill="#FFFFFF" opacity="0.9"/>
+  </g>
+  
+  <!-- Small sparkles around explosion -->
+  <g fill="#FFFFFF">
+    <circle cx="220" cy="140" r="2.5"/>
+    <circle cx="450" cy="200" r="3"/>
+    <circle cx="470" cy="420" r="2.5"/>
+    <circle cx="340" cy="540" r="3"/>
+    <circle cx="120" cy="480" r="2.5"/>
+    <circle cx="100" cy="250" r="3"/>
+    <circle cx="150" cy="130" r="2.5"/>
+    <circle cx="420" cy="120" r="2.5"/>
+  </g>
+  
+  <!-- Game Title -->
+  <g filter="url(#textGlow)">
+    <text x="750" y="280" font-family="Georgia, serif" font-size="88" font-weight="bold" fill="url(#titleGradient)" text-anchor="middle">CHAIN</text>
+    <text x="750" y="380" font-family="Georgia, serif" font-size="88" font-weight="bold" fill="url(#titleGradient)" text-anchor="middle">REACTION</text>
+  </g>
+  
+  <!-- Tagline -->
+  <text x="750" y="440" font-family="Arial, sans-serif" font-size="28" fill="#FFFFFF" opacity="0.8" text-anchor="middle">One tap, endless possibilities</text>
+  
+  <!-- Decorative stars near title -->
+  <g fill="#F4D03F" filter="url(#glow)">
+    <polygon points="560,290 565,305 580,305 568,315 573,330 560,320 547,330 552,315 540,305 555,305" transform="scale(0.6) translate(350, 150)"/>
+    <polygon points="980,290 985,305 1000,305 988,315 993,330 980,320 967,330 972,315 960,305 975,305" transform="scale(0.6) translate(700, 150)"/>
+  </g>
+  
+  <!-- Bottom decorative particles -->
+  <g filter="url(#glow)">
+    <circle cx="600" cy="550" r="8" fill="url(#particleRed)"/>
+    <circle cx="700" cy="570" r="6" fill="url(#particleTeal)"/>
+    <circle cx="800" cy="555" r="7" fill="url(#particlePurple)"/>
+    <circle cx="900" cy="565" r="6" fill="url(#particleGreen)"/>
+  </g>
+  
+  <!-- Subtle border glow -->
+  <rect x="10" y="10" width="1180" height="610" fill="none" stroke="url(#titleGradient)" stroke-width="2" opacity="0.3" rx="10"/>
+</svg>
